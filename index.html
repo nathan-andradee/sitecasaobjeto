@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Casa | Decoração de Interiores e Adornos em Brasília</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            cream: '#F9F6F0',
+                            creamCard: '#F2ECE1',
+                            creamDarker: '#E5DCCE',
+                            offwhite: '#FAFAF7',
+                            woodDark: '#2A221C',
+                            woodMedium: '#4A3E35',
+                            woodWarm: '#6D5C50',
+                            gold: '#C5A059',
+                            goldLight: '#E6D5B8'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F9F6F0;
+            color: #2A221C;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #2A221C 0%, #C5A059 50%, #4A3E35 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gallery-item {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Responsive refinements */
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-width: 320px;
+            overflow-x: hidden;
+        }
+
+        img, iframe, svg {
+            max-width: 100%;
+        }
+
+        iframe {
+            display: block;
+        }
+
+        .hero-video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* The catalog CTA must remain completely flat: no card/box around it. */
+        .catalog-cta {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            outline: 0 !important;
+            border-radius: 0 !important;
+        }
+
+        .catalog-cta a {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        /* Avoid oversized typography and cramped controls on very small phones. */
+        @media (max-width: 380px) {
+            header .font-serif {
+                letter-spacing: 0.08em;
+            }
+
+            #mobileMenu {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .filter-btn {
+                max-width: 100%;
+                white-space: normal;
+            }
+
+            .catalog-cta {
+                padding-left: 0.25rem;
+                padding-right: 0.25rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            section {
+                scroll-margin-top: 5.5rem;
+            }
+
+            #waPopover {
+                width: min(18rem, calc(100vw - 2rem));
+                max-width: calc(100vw - 2rem);
+            }
+        }
+
+        @media (min-width: 641px) {
+            section {
+                scroll-margin-top: 6rem;
+            }
+        }
+
+    
+        /* Full-bleed Hero video */
+        #inicio {
+            min-height: 100svh;
+            min-height: 100dvh;
+        }
+
+        #inicio video {
+            object-position: center center;
+        }
+
+        @media (max-width: 640px) {
+            #inicio {
+                min-height: 100svh;
+            }
+
+            #inicio video {
+                object-position: 55% center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #inicio video {
+                /* Video remains available, but the browser may reduce motion automatically. */
+            }
+        }
+
+        html, body {
+            overflow-x: hidden;
+        }
+
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-woodDark antialiased selection:bg-brand-gold selection:text-white">
+
+    <!-- Sticky Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-brand-goldLight/50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 min-h-20 sm:min-h-24 py-3 sm:py-0 flex items-center justify-between gap-3">
+            
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none">
+                <div class="w-10 h-10 sm:w-11 sm:h-11 bg-brand-woodDark rounded-lg p-2 flex items-center justify-center shadow-md group-hover:bg-brand-gold transition-colors duration-300">
+                    <!-- SVG Logo matching brand mark -->
+                    <svg viewBox="0 0 100 100" class="w-full h-full text-brand-gold group-hover:text-brand-woodDark transition-colors fill-current">
+                        <path d="M 45,15 C 22.9,15 5,32.9 5,55 C 5,77.1 22.9,95 45,95 C 57.5,95 68.6,89.3 75.9,80.3 L 69.1,73.8 C 63.3,81.1 54.7,85.7 45,85.7 C 28.1,85.7 14.3,71.9 14.3,55 C 14.3,38.1 28.1,24.3 45,24.3 C 55.4,24.3 64.5,29.5 70.1,37.4 C 72.9,34.7 76,32.2 79.3,30 C 71.5,20.8 59,15 45,15 Z" />
+                        <path d="M 65,38 L 38,60 L 38,95 L 92,95 L 92,60 Z M 84,87 L 46,87 L 46,63.5 L 65,48.5 L 84,63.5 Z" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-[1rem] min-[380px]:text-xl sm:text-2xl font-bold tracking-widest text-brand-woodDark leading-none">OBJETO CASA</span>
+                    <span class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-brand-gold font-medium mt-0.5">Brasília • DF</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-7 text-xs font-semibold tracking-wider uppercase text-brand-woodDark">
+                <a href="#sobre" class="hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Sobre</a>
+                <a href="#curadoria" class="hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Curadoria</a>
+                <a href="#servicos" class="hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Serviços</a>
+                <a href="#diferenciais" class="hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Diferenciais</a>
+                <a href="#depoimentos" class="hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Depoimentos</a>
+                <a href="#localizacao" class="hover:text-brand-gold transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Loja Física</a>
+            </nav>
+
+            <!-- WhatsApp Header Action -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="https://wa.me/5561999447970?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20curadoria%20da%20Objeto%20Casa." target="_blank" rel="noopener" class="bg-brand-woodDark hover:bg-brand-gold text-brand-cream hover:text-brand-woodDark px-5 py-2.5 rounded-full font-medium text-xs sm:text-sm flex items-center gap-2.5 transition-all duration-300 shadow-md transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+                    <span>Atendimento</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobileMenuBtn" class="lg:hidden text-brand-woodDark p-2 focus:outline-none" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-cream border-b border-brand-goldLight/60 px-6 pt-4 pb-8 space-y-3 shadow-xl">
+            <a href="#sobre" class="mobile-link block text-base font-serif text-brand-woodDark hover:text-brand-gold py-2 border-b border-brand-goldLight/30">Sobre Nós</a>
+            <a href="#curadoria" class="mobile-link block text-base font-serif text-brand-woodDark hover:text-brand-gold py-2 border-b border-brand-goldLight/30">Nossa Curadoria</a>
+            <a href="#servicos" class="mobile-link block text-base font-serif text-brand-woodDark hover:text-brand-gold py-2 border-b border-brand-goldLight/30">Serviços</a>
+            <a href="#diferenciais" class="mobile-link block text-base font-serif text-brand-woodDark hover:text-brand-gold py-2 border-b border-brand-goldLight/30">Diferenciais</a>
+            <a href="#depoimentos" class="mobile-link block text-base font-serif text-brand-woodDark hover:text-brand-gold py-2 border-b border-brand-goldLight/30">Depoimentos</a>
+            <a href="#localizacao" class="mobile-link block text-base font-serif text-brand-woodDark hover:text-brand-gold py-2 border-b border-brand-goldLight/30">Visite na Asa Sul</a>
+            <a href="https://wa.me/5561999447970" target="_blank" class="w-full mt-4 bg-brand-woodDark text-brand-cream py-3 rounded-xl flex items-center justify-center gap-2 font-medium text-sm">
+                <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                <span>Atendimento WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-[100svh] w-full overflow-hidden flex items-center bg-brand-woodDark">
+        <!-- Full-screen background video -->
+        <video
+            class="absolute inset-0 w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="assets/image-1-db0fa311ba.webp"
+            aria-hidden="true">
+            <source src="assets/video-1-1bbf59d501.mp4" type="video/mp4">
+        </video>
+
+        <!-- Readability overlay -->
+        <div class="absolute inset-0 bg-brand-woodDark/45"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-woodDark/80 via-brand-woodDark/35 to-brand-woodDark/10"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-woodDark/65 via-transparent to-brand-woodDark/15"></div>
+
+        <!-- Hero copy over video -->
+        <div class="relative z-10 w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 sm:py-24 lg:py-28">
+                <div class="max-w-3xl text-center lg:text-left">
+
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-woodDark/45 backdrop-blur-sm border border-brand-gold/40 text-brand-cream text-xs sm:text-sm font-medium tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                        A melhor curadoria de adornos de Brasília
+                    </div>
+
+                    <h1 class="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-brand-cream leading-[1.08] drop-shadow-lg">
+                        Transformamos ambientes em
+                        <span class="gold-gradient-text italic font-normal block sm:inline"> obras de arte</span>
+                    </h1>
+
+                    <p class="mt-5 text-sm sm:text-base lg:text-lg text-brand-cream/95 max-w-2xl leading-relaxed font-light drop-shadow-md">
+                        Objetos de decoração exclusivos, esculturas com alma e adornos selecionados para elevar o design de residências e escritórios no Distrito Federal.
+                    </p>
+
+                    <div class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 w-full">
+                        <a href="https://wa.me/5561999447970?text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20para%20escolha%20de%20adornos." target="_blank" rel="noopener" class="w-full sm:w-auto bg-brand-woodDark/90 hover:bg-brand-woodDark text-brand-cream px-7 py-4 rounded-xl font-medium text-sm sm:text-base shadow-xl backdrop-blur-sm flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 border border-brand-cream/10">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg sm:text-xl"></i>
+                            <span>Falar com Curadora</span>
+                        </a>
+
+                        <a href="#curadoria" class="w-full sm:w-auto bg-brand-cream/10 hover:bg-brand-cream/20 backdrop-blur-sm border border-brand-cream/70 hover:border-brand-gold text-brand-cream px-7 py-4 rounded-xl font-medium text-sm sm:text-base flex items-center justify-center gap-2 transition-all">
+                            <span>Ver Acervo</span>
+                            <i class="fa-solid fa-arrow-right text-xs sm:text-sm text-brand-gold"></i>
+                        </a>
+                    </div>
+
+                    <!-- Social Proof Stats -->
+                    <div class="pt-7 sm:pt-9 mt-2 grid grid-cols-3 gap-3 sm:gap-6 border-t border-brand-cream/30 max-w-xl">
+                        <div>
+                            <span class="block font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-brand-cream">28.4k</span>
+                            <span class="text-[10px] sm:text-xs text-brand-cream/80">Seguidores no IG</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-brand-cream">3.500+</span>
+                            <span class="text-[10px] sm:text-xs text-brand-cream/80">Projetos Atendidos</span>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-brand-cream">100%</span>
+                            <span class="text-[10px] sm:text-xs text-brand-cream/80">Curadoria Autoral</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subtle scroll indicator -->
+        <a href="#sobre" class="absolute z-20 bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 text-brand-cream/80 hover:text-brand-cream transition-colors" aria-label="Rolar para baixo">
+            <span class="text-[9px] uppercase tracking-[0.25em]">Explorar</span>
+            <i class="fa-solid fa-chevron-down text-xs animate-bounce"></i>
+        </a>
+    </section>
+
+<!-- Sobre Nós Section -->
+    <section id="sobre" class="py-16 sm:py-24 bg-brand-offwhite relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                
+                <!-- Gallery Grid Column -->
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden shadow-lg h-48 sm:h-64 border border-brand-goldLight">
+                            <img src="assets/image-1-15e00e22a4.jpeg" alt="Ambiente sofisticado com estante e decoração" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg h-32 sm:h-44 border border-brand-goldLight">
+                            <img src="assets/image-2-1f1ec117b2.jpeg" alt="Sala de estar sofisticada com decoração contemporânea" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-6">
+                        <div class="rounded-2xl overflow-hidden shadow-lg h-32 sm:h-44 border border-brand-goldLight">
+                            <img src="assets/image-3-77aaa1cc66.jpeg" alt="Luminária decorativa dourada com composição de mesa" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden shadow-lg h-48 sm:h-64 border border-brand-goldLight">
+                            <img src="assets/image-4-74a2995440.jpeg" alt="Sala de estar elegante com painel de madeira e estante" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content Column -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-brand-gold font-semibold block">Nossa História & Filosofia</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-woodDark leading-tight">
+                        A essência da sofisticação em cada detalhe
+                    </h2>
+                    <p class="text-brand-woodWarm text-sm sm:text-base leading-relaxed font-light">
+                        Localizada no coração da Asa Sul em Brasília, a <strong class="font-semibold text-brand-woodDark">Objeto Casa</strong> nasceu do desejo de unir a essência da arquitetura contemporânea à delicadeza do trabalho autoral.
+                    </p>
+                    <p class="text-brand-woodWarm text-sm sm:text-base leading-relaxed font-light">
+                        Cada escultura, vaso, livro de mesa ou elemento tátil em nosso acervo é rigorosamente escolhido. Acreditamos que uma casa não é feita apenas de móveis, mas das memórias e sentimentos expressos em cada objeto decorativo.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-xl bg-brand-creamCard border border-brand-goldLight/60">
+                            <i class="fa-solid fa-compass-drafting text-brand-gold text-xl mb-2"></i>
+                            <h4 class="font-serif font-bold text-brand-woodDark text-base">Olhar Arquitetônico</h4>
+                            <p class="text-xs text-brand-woodWarm mt-1">Peças pensadas para harmonizar com volumes, luz e proporções.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-brand-creamCard border border-brand-goldLight/60">
+                            <i class="fa-solid fa-feather-pointed text-brand-gold text-xl mb-2"></i>
+                            <h4 class="font-serif font-bold text-brand-woodDark text-base">Materiais Nobres</h4>
+                            <p class="text-xs text-brand-woodWarm mt-1">Madeiras maciças, pedras naturais, mármore e cerâmicas únicas.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Curadoria / Acervo Section -->
+    <section id="curadoria" class="py-16 sm:py-24 bg-brand-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+                <span class="text-xs uppercase tracking-widest text-brand-gold font-semibold block mb-2">Acervo Exclusivo</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-woodDark">Nossa Curadoria em Destaque</h2>
+                <p class="text-brand-woodWarm mt-3 text-sm sm:text-base font-light">Explore uma prévia das nossas peças autorais e seleções de alta decoração em Brasília.</p>
+                
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8 px-1">
+                    <button onclick="filterGallery('todos')" class="filter-btn active bg-brand-woodDark text-brand-cream px-4 py-2 rounded-full text-xs font-medium transition-all">Todos</button>
+                    <button onclick="filterGallery('esculturas')" class="filter-btn bg-brand-creamCard hover:bg-brand-goldLight/50 text-brand-woodDark px-4 py-2 rounded-full text-xs font-medium transition-all">Esculturas & Vasos</button>
+                    <button onclick="filterGallery('mesas')" class="filter-btn bg-brand-creamCard hover:bg-brand-goldLight/50 text-brand-woodDark px-4 py-2 rounded-full text-xs font-medium transition-all">Centros de Mesa</button>
+                    <button onclick="filterGallery('livros')" class="filter-btn bg-brand-creamCard hover:bg-brand-goldLight/50 text-brand-woodDark px-4 py-2 rounded-full text-xs font-medium transition-all">Livros & Aromas</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="gallery-item esculturas bg-brand-offwhite rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-goldLight/50 group">
+                    <div class="relative h-64 sm:h-72 overflow-hidden bg-gray-100">
+                        <img src="assets/image-5-772dfa652b.jpeg" alt="Poltrona de leitura em ambiente com estante iluminada" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-brand-woodDark/80 backdrop-blur-md text-brand-cream text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full">Exclusivo</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-xl font-bold text-brand-woodDark">Poltrona de Leitura & Estante Iluminada</h3>
+                        <p class="text-xs text-brand-woodWarm mt-1">Ambiente acolhedor com poltrona confortável, marcenaria planejada e iluminação cênica.</p>
+                        <div class="mt-4 pt-3 border-t border-brand-creamDarker flex items-center justify-between">
+                            <span class="text-xs text-brand-gold font-medium">Ambientes & Design</span>
+                            <a href="https://wa.me/5561999447970?text=Gostaria+de+informa%C3%A7%C3%B5es+sobre+Poltrona+de+Leitura+e+Estante+Iluminada" target="_blank" class="text-brand-woodDark hover:text-brand-gold text-xs font-semibold flex items-center gap-1">
+                                Consultar <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="gallery-item esculturas bg-brand-offwhite rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-goldLight/50 group">
+                    <div class="relative h-64 sm:h-72 overflow-hidden bg-gray-100">
+                        <img src="assets/image-6-7ff091d0f9.jpeg" alt="Sala de estar contemporânea com sofá azul e mobiliário em madeira" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-xl font-bold text-brand-woodDark">Sala de Estar Contemporânea</h3>
+                        <p class="text-xs text-brand-woodWarm mt-1">Composição elegante com sofá, poltronas e mesa de centro em madeira para uma sala sofisticada.</p>
+                        <div class="mt-4 pt-3 border-t border-brand-creamDarker flex items-center justify-between">
+                            <span class="text-xs text-brand-gold font-medium">Curadoria de Ambientes</span>
+                            <a href="https://wa.me/5561999447970?text=Gostaria+de+informa%C3%A7%C3%B5es+sobre+Sala+de+Estar+Contempor%C3%A2nea" target="_blank" class="text-brand-woodDark hover:text-brand-gold text-xs font-semibold flex items-center gap-1">
+                                Consultar <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="gallery-item mesas bg-brand-offwhite rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-goldLight/50 group">
+                    <div class="relative h-64 sm:h-72 overflow-hidden bg-gray-100">
+                        <img src="assets/image-7-c2b44e7e68.jpeg" alt="Sala de estar com painel de TV, mobiliário azul e mesa de centro em madeira" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-xl font-bold text-brand-woodDark">Painel de TV & Mobiliário em Madeira</h3>
+                        <p class="text-xs text-brand-woodWarm mt-1">Composição de TV com painel em madeira, mobiliário azul e elementos decorativos contemporâneos.</p>
+                        <div class="mt-4 pt-3 border-t border-brand-creamDarker flex items-center justify-between">
+                            <span class="text-xs text-brand-gold font-medium">Projeto Residencial</span>
+                            <a href="https://wa.me/5561999447970?text=Gostaria+de+informa%C3%A7%C3%B5es+sobre+Painel+de+TV+e+Mobili%C3%A1rio+em+Madeira" target="_blank" class="text-brand-woodDark hover:text-brand-gold text-xs font-semibold flex items-center gap-1">
+                                Consultar <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="gallery-item livros aromas bg-brand-offwhite rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-goldLight/50 group">
+                    <div class="relative h-64 sm:h-72 overflow-hidden bg-gray-100">
+                        <img src="assets/image-8-f3bb7415b0.jpeg" alt="Ampulárias decorativas com areia dourada sobre mesa de mármore" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-xl font-bold text-brand-woodDark">Ampulárias Decorativas em Mármore</h3>
+                        <p class="text-xs text-brand-woodWarm mt-1">Peças decorativas em vidro com areia dourada, valorizadas sobre uma superfície de mármore.</p>
+                        <div class="mt-4 pt-3 border-t border-brand-creamDarker flex items-center justify-between">
+                            <span class="text-xs text-brand-gold font-medium">Objetos Decorativos</span>
+                            <a href="https://wa.me/5561999447970?text=Gostaria+de+informa%C3%A7%C3%B5es+sobre+Ampul%C3%A1rias+Decorativas+em+M%C3%A1rmore" target="_blank" class="text-brand-woodDark hover:text-brand-gold text-xs font-semibold flex items-center gap-1">
+                                Consultar <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-16 sm:py-24 bg-brand-woodDark text-brand-cream relative overflow-hidden">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-xs uppercase tracking-widest text-brand-gold font-semibold block mb-2">Excelência & Comodidade</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-cream">Serviços Personalizados</h2>
+                <p class="text-brand-creamDarker mt-3 sm:mt-4 text-sm sm:text-base font-light">Oferecemos uma experiência completa de ambientação para clientes finais, arquitetos e designers de interiores.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-brand-woodMedium/40 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-brand-gold/30 hover:border-brand-gold transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 sm:w-14 h-12 sm:h-14 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xl sm:text-2xl mb-4 sm:mb-6">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-cream mb-3">Mala do Cliente em Domicílio</h3>
+                    <p class="text-xs sm:text-sm text-brand-creamDarker leading-relaxed font-light mb-6">
+                        Levamos uma seleção personalizada de adornos diretamente para a sua residência ou projeto. Veja como as peças se comportam na sua iluminação e móveis antes de decidir.
+                    </p>
+                    <a href="https://wa.me/5561999447970?text=Gostaria%20de%20agendar%20o%20servi%C3%A7o%20de%20Mala%20em%20Domic%C3%ADlio." target="_blank" class="inline-flex items-center gap-2 text-xs uppercase font-semibold text-brand-gold hover:text-brand-goldLight tracking-wider">
+                        Agendar Mala <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-brand-woodMedium/40 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-brand-gold/30 hover:border-brand-gold transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 sm:w-14 h-12 sm:h-14 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xl sm:text-2xl mb-4 sm:mb-6">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-cream mb-3">Atendimento a Arquitetos</h3>
+                    <p class="text-xs sm:text-sm text-brand-creamDarker leading-relaxed font-light mb-6">
+                        Suporte técnico especializado para escritórios de arquitetura. Auxiliamos na especificação de objetos para produções de fotos, entregas de chaves e eventos finais.
+                    </p>
+                    <a href="https://wa.me/5561999447970?text=Sou%20arquiteto(a)%20e%20gostaria%20de%20parceria." target="_blank" class="inline-flex items-center gap-2 text-xs uppercase font-semibold text-brand-gold hover:text-brand-goldLight tracking-wider">
+                        Área de Especificadores <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-brand-woodMedium/40 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-brand-gold/30 hover:border-brand-gold transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 sm:w-14 h-12 sm:h-14 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xl sm:text-2xl mb-4 sm:mb-6">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-cream mb-3">Produção de Ambientes</h3>
+                    <p class="text-xs sm:text-sm text-brand-creamDarker leading-relaxed font-light mb-6">
+                        Nossa equipe realiza a composição presencial na sua casa. Organizamos estantes, mesas de centro, lavabos e aparadores com equilíbrio e sofisticação.
+                    </p>
+                    <a href="https://wa.me/5561999447970?text=Gostaria%20de%20saber%20mais%20sobre%20a%20Produ%C3%A7%C3%A3o%20de%20Ambientes." target="_blank" class="inline-flex items-center gap-2 text-xs uppercase font-semibold text-brand-gold hover:text-brand-goldLight tracking-wider">
+                        Solicitar Orçamento <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Diferenciais Section -->
+    <section id="diferenciais" class="py-16 sm:py-24 bg-brand-offwhite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+                <span class="text-xs uppercase tracking-widest text-brand-gold font-semibold block mb-2">Por que escolher a Objeto Casa</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-woodDark">Nossos Diferenciais</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-goldLight/60 hover:shadow-lg transition-all text-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold/15 flex items-center justify-center text-brand-woodDark text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h4 class="font-serif font-bold text-xl text-brand-woodDark mb-2">Curadoria Autoral</h4>
+                    <p class="text-xs text-brand-woodWarm leading-relaxed">Seleção exclusiva de artesãos brasileiros e peças garimpadas com originalidade.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-goldLight/60 hover:shadow-lg transition-all text-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold/15 flex items-center justify-center text-brand-woodDark text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h4 class="font-serif font-bold text-xl text-brand-woodDark mb-2">Pronta Entrega no DF</h4>
+                    <p class="text-xs text-brand-woodWarm leading-relaxed">Agilidade na entrega e montagem para todo o Plano Piloto e regiões de Brasília.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-goldLight/60 hover:shadow-lg transition-all text-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold/15 flex items-center justify-center text-brand-woodDark text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h4 class="font-serif font-bold text-xl text-brand-woodDark mb-2">Consultoria Especializada</h4>
+                    <p class="text-xs text-brand-woodWarm leading-relaxed">Atendimento humanizado focado em encontrar a peça ideal para a linguagem do seu projeto.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-6 rounded-2xl bg-brand-cream border border-brand-goldLight/60 hover:shadow-lg transition-all text-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-gold/15 flex items-center justify-center text-brand-woodDark text-xl mx-auto mb-4">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h4 class="font-serif font-bold text-xl text-brand-woodDark mb-2">Loja Física na Asa Sul</h4>
+                    <p class="text-xs text-brand-woodWarm leading-relaxed">Espaço aconchegante para você vivenciar a textura e escala real das peças.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="py-16 sm:py-24 bg-brand-creamCard relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs uppercase tracking-widest text-brand-gold font-semibold block mb-2">Histórias Reais</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-woodDark">O que dizem nossos clientes e parceiros</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-brand-offwhite shadow-sm border border-brand-goldLight/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 gap-1 text-xs mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-brand-woodWarm italic leading-relaxed font-light">
+                            "A Objeto Casa é a minha parada obrigatória para finalização de obras. O acervo de adornos e a facilidade do serviço de Mala em Domicílio transformam o resultado final dos meus projetos no Lago Sul."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-goldLight/40 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center font-serif font-bold text-brand-woodDark text-sm">
+                            MC
+                        </div>
+                        <div>
+                            <h5 class="font-serif font-bold text-brand-woodDark text-sm">Mariana Cavalcanti</h5>
+                            <span class="text-[11px] text-brand-woodWarm block">Arquiteta • Brasília DF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-brand-offwhite shadow-sm border border-brand-goldLight/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 gap-1 text-xs mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-brand-woodWarm italic leading-relaxed font-light">
+                            "Atendimento impecável na loja da Asa Sul. As curadoras entenderam exatamente a paleta da minha sala e trouxeram esculturas que viraram o centro das atenções das visitas."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-goldLight/40 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center font-serif font-bold text-brand-woodDark text-sm">
+                            RA
+                        </div>
+                        <div>
+                            <h5 class="font-serif font-bold text-brand-woodDark text-sm">Ricardo Almeida</h5>
+                            <span class="text-[11px] text-brand-woodWarm block">Cliente • Noroeste</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-brand-offwhite shadow-sm border border-brand-goldLight/60 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 gap-1 text-xs mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-brand-woodWarm italic leading-relaxed font-light">
+                            "Qualidade fantástica das cerâmicas e livros de arte. Cada detalhe da embalagem e do atendimento demonstra o carinho com o design de interiores."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-goldLight/40 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center font-serif font-bold text-brand-woodDark text-sm">
+                            BS
+                        </div>
+                        <div>
+                            <h5 class="font-serif font-bold text-brand-woodDark text-sm">Beatriz Siqueira</h5>
+                            <span class="text-[11px] text-brand-woodWarm block">Designer de Interiores • Sudoeste</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Localização Section -->
+    <section id="localizacao" class="py-16 sm:py-24 bg-brand-offwhite relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Address Details Card -->
+                <div class="lg:col-span-5 space-y-5 sm:space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-brand-gold font-semibold block">Visite Nossa Loja Física</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold text-brand-woodDark">Venha nos conhecer na Asa Sul</h2>
+                    <p class="text-brand-woodWarm text-sm sm:text-base font-light">
+                        Sinta as texturas, contemple as cores e receba um café e uma consultoria presencial de nossos especialistas.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        
+                        <!-- Address -->
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-9 sm:w-10 h-9 sm:h-10 rounded-lg bg-brand-gold/15 flex items-center justify-center text-brand-woodDark text-base sm:text-lg flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-serif font-bold text-base sm:text-lg text-brand-woodDark">Endereço</h5>
+                                <p class="text-xs sm:text-sm text-brand-woodWarm">SHCS CLS 302 Bloco B Loja 34 - Asa Sul</p>
+                                <p class="text-xs text-brand-woodWarm font-medium">Brasília - DF, 70336-540</p>
+                            </div>
+                        </div>
+
+                        <!-- Opening Hours -->
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-9 sm:w-10 h-9 sm:h-10 rounded-lg bg-brand-gold/15 flex items-center justify-center text-brand-woodDark text-base sm:text-lg flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-serif font-bold text-base sm:text-lg text-brand-woodDark">Horário de Funcionamento</h5>
+                                <p class="text-xs sm:text-sm text-brand-woodWarm">Segunda a Sexta: 09:00 - 18:00</p>
+                                <p class="text-xs sm:text-sm text-brand-woodWarm">Sábado: 09:00 - 13:00</p>
+                                <p class="text-xs text-red-700 font-medium">Domingo: Fechado</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone / WhatsApp -->
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-9 sm:w-10 h-9 sm:h-10 rounded-lg bg-brand-gold/15 flex items-center justify-center text-brand-woodDark text-base sm:text-lg flex-shrink-0 mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-serif font-bold text-base sm:text-lg text-brand-woodDark">Telefones & WhatsApp</h5>
+                                <p class="text-xs sm:text-sm text-brand-woodWarm">WhatsApp: +55 (61) 99944-7970</p>
+                                <p class="text-xs sm:text-sm text-brand-woodWarm">Fixo: +55 (61) 3321-0294</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a href="https://maps.google.com/?q=CLS+302+Bloco+B+Asa+Sul+Brasilia+DF" target="_blank" class="w-full sm:w-auto justify-center bg-brand-woodDark hover:bg-brand-woodMedium text-brand-cream px-5 py-3 rounded-xl text-xs sm:text-sm font-medium flex items-center gap-2 transition-all shadow-md">
+                            <i class="fa-solid fa-map-location-dot text-brand-gold"></i>
+                            <span>Abrir no Google Maps</span>
+                        </a>
+                        <a href="https://wa.me/5561999447970?text=Gostaria%20de%20saber%20se%20h%C3%A1%20estacionamento%20pr%C3%B3ximo%20%C3%A0%20loja." target="_blank" class="w-full sm:w-auto justify-center bg-emerald-700 hover:bg-emerald-800 text-white px-5 py-3 rounded-xl text-xs sm:text-sm font-medium flex items-center gap-2 transition-all shadow-md">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Falar Conosco</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Frame -->
+                <div class="lg:col-span-7">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-brand-creamDarker h-64 xs:h-72 sm:h-96 relative bg-gray-200">
+                        <iframe 
+                            title="Mapa de localização Objeto Casa Brasília"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.0838183042617!2d-47.8920!3d-15.8080!2m3!10f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3d02d061a083%3A0x5958c5c71c9b1632!2sCLS%20302%20Bloco%20B%20-%20Asa%20Sul%2C%20Bras%C3%ADlia%20-%20DF!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                            class="w-full h-full border-0" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-woodDark text-brand-cream border-t border-brand-gold/20 pt-12 sm:pt-16 pb-8 sm:pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
+                
+                <!-- Brand Info -->
+                <div class="space-y-4 col-span-1 sm:col-span-2 md:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-gold/20 rounded-md p-1.5 flex items-center justify-center border border-brand-gold/40">
+                            <svg viewBox="0 0 100 100" class="w-full h-full text-brand-gold fill-current">
+                                <path d="M 45,15 C 22.9,15 5,32.9 5,55 C 5,77.1 22.9,95 45,95 C 57.5,95 68.6,89.3 75.9,80.3 L 69.1,73.8 C 63.3,81.1 54.7,85.7 45,85.7 C 28.1,85.7 14.3,71.9 14.3,55 C 14.3,38.1 28.1,24.3 45,24.3 C 55.4,24.3 64.5,29.5 70.1,37.4 C 72.9,34.7 76,32.2 79.3,30 C 71.5,20.8 59,15 45,15 Z" />
+                                <path d="M 65,38 L 38,60 L 38,95 L 92,95 L 92,60 Z M 84,87 L 46,87 L 46,63.5 L 65,48.5 L 84,63.5 Z" />
+                            </svg>
+                        </div>
+                        <span class="font-serif text-2xl font-bold tracking-wider text-brand-cream">OBJETO CASA</span>
+                    </div>
+                    <p class="text-xs text-brand-creamDarker leading-relaxed font-light">
+                        A melhor curadoria de adornos de Brasília. Transformamos ambientes em obras de arte através da arquitetura e do design de interiores.
+                    </p>
+                    <div class="flex space-x-4 pt-2">
+                        <a href="https://www.instagram.com/objeto.casa/" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-brand-woodMedium hover:bg-brand-gold text-brand-cream hover:text-brand-woodDark flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/5561999447970" target="_blank" class="w-9 h-9 rounded-full bg-brand-woodMedium hover:bg-emerald-600 text-brand-cream flex items-center justify-center transition-all">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Quick Links -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg text-brand-gold mb-4">Navegação</h4>
+                    <ul class="space-y-2 text-xs text-brand-creamDarker">
+                        <li><a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre A Objeto Casa</a></li>
+                        <li><a href="#curadoria" class="hover:text-brand-gold transition-colors">Curadoria de Adornos</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-gold transition-colors">Serviços Exclusivos</a></li>
+                        <li><a href="#diferenciais" class="hover:text-brand-gold transition-colors">Diferenciais da Loja</a></li>
+                        <li><a href="#depoimentos" class="hover:text-brand-gold transition-colors">Depoimentos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Store Info -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg text-brand-gold mb-4">Atendimento</h4>
+                    <ul class="space-y-2 text-xs text-brand-creamDarker">
+                        <li><i class="fa-solid fa-location-dot text-brand-gold mr-2"></i> Asa Sul - CLS 302 Bloco B Loja 34</li>
+                        <li><i class="fa-solid fa-city text-brand-gold mr-2"></i> Brasília - DF</li>
+                        <li><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> +55 (61) 99944-7970</li>
+                        <li><i class="fa-solid fa-phone text-brand-gold mr-2"></i> +55 (61) 3321-0294</li>
+                    </ul>
+                </div>
+
+                <!-- Social Stats -->
+                <div>
+                    <h4 class="font-serif font-bold text-lg text-brand-gold mb-4">Instagram Oficial</h4>
+                    <div class="bg-brand-woodMedium/40 p-4 rounded-xl border border-brand-gold/20 space-y-2">
+                        <p class="text-xs text-brand-cream font-medium">@objeto.casa</p>
+                        <p class="text-xs text-brand-creamDarker">28,4 mil seguidores • 3.540 publicações</p>
+                        <a href="https://www.instagram.com/objeto.casa/" target="_blank" class="inline-block mt-2 text-[11px] font-semibold text-brand-gold hover:underline">
+                            Ver Perfil no Instagram &rarr;
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-brand-woodMedium pt-8 text-center text-xs text-brand-creamDarker font-light">
+                <p>&copy; 2026 Objeto Casa Brasília. Todos os direitos reservados. Design de Interiores e Adornos Nobres.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <div class="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 flex flex-col items-end">
+        
+        <!-- Interactive WhatsApp Chat Popover -->
+        <div id="waPopover" class="hidden mb-4 w-[calc(100vw-2rem)] max-w-64 sm:max-w-72 bg-brand-offwhite rounded-2xl shadow-2xl border border-brand-goldLight overflow-hidden transition-all duration-300">
+            <div class="bg-brand-woodDark text-brand-cream p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <div class="w-8 sm:w-9 h-8 sm:h-9 rounded-full bg-brand-gold text-brand-woodDark font-bold flex items-center justify-center text-xs">
+                            OC
+                        </div>
+                        <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full absolute bottom-0 right-0 border-2 border-brand-woodDark"></span>
+                    </div>
+                    <div>
+                        <h5 class="text-xs sm:text-sm font-serif font-bold text-brand-goldLight">Objeto Casa</h5>
+                        <p class="text-[10px] text-gray-300">Atendimento Online Asa Sul</p>
+                    </div>
+                </div>
+                <button onclick="toggleWaPopover()" class="text-gray-400 hover:text-white text-sm p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-4 space-y-3 bg-brand-cream">
+                <div class="bg-white p-3 rounded-xl rounded-tl-none shadow-sm border border-brand-goldLight/40 text-xs text-brand-woodDark">
+                    <p>Olá! 👋 Como podemos ajudar na escolha dos adornos para o seu ambiente?</p>
+                    <span class="text-[9px] text-gray-400 block mt-1 text-right">Agora mesmo</span>
+                </div>
+                <a href="https://wa.me/5561999447970?text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20da%20Objeto%20Casa." target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-md">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Iniciar Conversa no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Action Button -->
+        <button onclick="toggleWaPopover()" class="bg-emerald-600 hover:bg-emerald-700 text-white w-12 sm:w-14 h-12 sm:h-14 rounded-full shadow-2xl flex items-center justify-center text-xl sm:text-2xl transition-transform hover:scale-110 focus:outline-none border-2 border-white relative group" aria-label="Abrir conversa do WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white flex items-center justify-center text-[9px] font-bold">1</span>
+        </button>
+    </div>
+
+    <script>
+        /* Mobile Menu Toggle Handler */
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        /* WhatsApp Popover Toggle */
+        function toggleWaPopover() {
+            const popover = document.getElementById('waPopover');
+            if (popover) {
+                popover.classList.toggle('hidden');
+            }
+        }
+
+        /* Curated Gallery Filtering Logic */
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-brand-woodDark', 'text-brand-cream');
+                btn.classList.add('bg-brand-creamCard', 'text-brand-woodDark');
+            });
+
+            if (window.event && window.event.currentTarget) {
+                const activeBtn = window.event.currentTarget;
+                activeBtn.classList.add('active', 'bg-brand-woodDark', 'text-brand-cream');
+                activeBtn.classList.remove('bg-brand-creamCard');
+            }
+
+            items.forEach(item => {
+                if (category === 'todos' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
